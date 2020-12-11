@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+
+<body>
+    <h1>Gericht erstellen</h1>
+    <form enctype="multipart/form-data" method="post" action="">
+        {% csrf_token %}
+        <table>
+            <tbody>
+                {{ meal_form.as_p }}
+                <p><button type="submit">hochladen</button></p>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

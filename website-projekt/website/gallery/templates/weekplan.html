@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<body>
+    <h1>Meals</h1>
+    {% if meals %}
+    <ul>
+        {% for meal in meals %}
+        <li>{{ meal.name }}<br />
+            {{ meal.ingredients }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Keine Meals verfügbar.</p>
+    {% endif %}
+    <p><a href="{% url 'create_meal' %}">Gericht erstellen</a></p>
+</body>
+
+</html>

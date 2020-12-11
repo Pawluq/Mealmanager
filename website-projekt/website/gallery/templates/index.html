@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<body>
+    <h1>Galerie</h1>
+    {% if images %}
+    <ul>
+        {% for image in images %}
+        <li>{{ image.name }}<br />
+            <img src="{{ image.file.url }}" /></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Keine Bilder verfügbar.</p>
+    {% endif %}
+    <p><a href="{% url 'upload' %}">Bild hochladen</a></p>
+</body>
+
+</html>
